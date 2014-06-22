@@ -35,10 +35,6 @@
   </body>
 </html>
 </richcontent>
-<node CREATED="1403325163486" ID="ID_1588466221" MODIFIED="1403325173107" TEXT="Alexandre Kabla">
-<node CREATED="1403326779550" ID="ID_1925473164" MODIFIED="1403326784051" TEXT="Mendeley"/>
-</node>
-<node CREATED="1403325604878" ID="ID_165219146" MODIFIED="1403419759292" TEXT="@ Department of Engineering"/>
 <node CREATED="1403325628894" ID="ID_720582646" MODIFIED="1403445006828" TEXT="Morning talks">
 <richcontent TYPE="NOTE"><html>
   <head>
@@ -77,7 +73,7 @@
 </html>
 </richcontent>
 </node>
-<node CREATED="1403326855222" ID="ID_853152537" MODIFIED="1403445770698" TEXT="Damien George">
+<node CREATED="1403326855222" ID="ID_853152537" MODIFIED="1403450765375" TEXT="Damien George">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -90,13 +86,13 @@
       
     </p>
     <p>
-      Damien is a post-doc at DAMPT; MicroPython is a personal project. All the more impressive that he has managed to create a very useful, compact, quick implementation of Python that runs on a small and inexpensive microcontroller board. I'll say more about MicroPython in a separate blog post.
+      Damien is a post-doc at DAMPT; Micro Python is a personal project. All the more impressive that he has managed to create a very useful, compact, quick implementation of Python that runs on a small and inexpensive microcontroller board. I'll say more about Micro Python in a separate blog post.
     </p>
   </body>
 </html>
 </richcontent>
 </node>
-<node CREATED="1403326944726" ID="ID_1688597568" MODIFIED="1403446094493" TEXT="Laura James">
+<node CREATED="1403326944726" ID="ID_1688597568" MODIFIED="1403450790844" TEXT="Laura James">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -115,29 +111,26 @@
       
     </p>
     <p>
-      Laura delivered one bombshell: it seems that works licensed under the Creative Commons non-commercial license cannot safely be used by Educators. I've had to rethink the licensing on an e-book I'm writing, as I wand it to be freely used in Priamry, Secondary and Tertiarty Education.
-    </p>
-    <p>
-      Bombshell - CC non-C precludes academic use.
+      Laura delivered one bombshell: it seems that works licensed under the Creative Commons non-commercial license cannot safely be used by Educators. I've had to rethink the licensing on an e-book I'm writing, as I wand it to be freely used in Primary, Secondary and Tertiary Education.
     </p>
   </body>
 </html>
 </richcontent>
 </node>
-<node CREATED="1403327285726" ID="ID_1518572765" MODIFIED="1403446632521" TEXT="Andrew Moore">
+<node CREATED="1403327285726" ID="ID_1518572765" MODIFIED="1403450449235" TEXT="Andrew Moore">
 <richcontent TYPE="NOTE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      Andrew Moore told us about an Open Source initiative that has had profound consequences - the netFPGA project. One spin-off, the OSNT tester, does much of what commercial network testers costing &#163;500,000 do, but at a fraction of the cost.
+      Andrew Moore told us about an Open Source initiative that has had profound consequences - the netFPGA project. One spin-off, the OSNT tester, does much of what commercial network testers costing L500,000 do, but at a fraction of the cost.
     </p>
   </body>
 </html>
 </richcontent>
 </node>
-<node CREATED="1403327185342" ID="ID_193445872" MODIFIED="1403447275745" TEXT="Boris Adryan">
+<node CREATED="1403327185342" ID="ID_193445872" MODIFIED="1403451150883" TEXT="Boris Adryan">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -156,7 +149,7 @@
       
     </p>
     <p>
-      Boris has become very involved with the Internet of Things, and will be running a NodeRED tutorial at the CamJam on 5th July. There are sill a few places available, so sign up soon!
+      Boris has become deeply involved with the Internet of Things, and will be running a NodeRED tutorial at the CamJam on 5th July. There are sill a few places available, so sign up soon!
     </p>
     <p>
       
@@ -181,33 +174,33 @@
 </html>
 </richcontent>
 </node>
-<node CREATED="1403327489134" ID="ID_1829589637" MODIFIED="1403447614016" TEXT="Jim Haseloff">
+<node CREATED="1403327489134" ID="ID_1829589637" MODIFIED="1403450752382" TEXT="Jim Haseloff">
 <richcontent TYPE="NOTE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      Jim Hasselhof talked about Open Biology, including OpenPlant, and invited people to join the Cambridge Synthetic Biology Meetup. They meet each week at the Caf&#233; Synthetique.
+      Jim Hasselhof talked about Open Biology, including OpenPlant, and invited people to join the Cambridge Synthetic Biology Meetup. &#160;They meet each week at the Cafe Synthetique.
     </p>
   </body>
 </html>
 </richcontent>
 </node>
-<node CREATED="1403327527710" ID="ID_1392378946" MODIFIED="1403448508731" TEXT="Rachel Rayns">
+<node CREATED="1403327527710" ID="ID_1392378946" MODIFIED="1403451175985" TEXT="Rachel Rayns">
 <richcontent TYPE="NOTE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      Rachel Rayns is the Artist-in-residence at the Raspberry Pi foundation. She gave us some fascinating background to Zo&#235;, her chatbot-cum-gardener. Her fascinating storuy included a Van full of vintage cine equipment and a space called Soup Labs; remarkable.
+      Rachel Rayns is the Artist-in-residence at the Raspberry Pi foundation. She gave us some fascinating background to Zoe, her chatbot-cum-gardener. Her fascinating story included a van full of vintage cine equipment and a space called Soup Labs; remarkable.
     </p>
     <p>
       
     </p>
     <p>
-      Zo&#235; sounds like a lot of fun; I'm sure we will see more of her.
+      Zoe sounds like a lot of fun; I'm sure we will see more of her.
     </p>
   </body>
 </html>

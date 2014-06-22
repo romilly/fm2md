@@ -11,6 +11,9 @@ def read_file(name):
     return result
 
 # TODO: handle non-ascii chars
+# TODO: set sub-head level based on map level
+# TODO: Handle hyperlinks
+# TODO: Handle images
 
 class ConverterTest(TestCase):
     def test_convert_creates_markdown_from_branch_titles(self):

@@ -23,7 +23,8 @@ class ConverterTest(TestCase):
         assert_that(md, contains_string('\n\n#Cambridge Engineering Labs\n\n'))
         assert_that(md, contains_string('#camopentools'))
 
-# TODO: add support for html links
+def remove_redundant_newlines(text):
+    return text.replace("\n\n[\n]*","\n\n")
 
 
 
@@ -49,7 +50,7 @@ class Converter():
         root = fm.find('node')
         for node in root:
             self.convert_node(node)
-        return self.result.getvalue()
+        return remove_redundant_newlines(self.result.getvalue())
 
     def convert_html_in(self, node):
         html = node.find('richcontent')
@@ -57,10 +58,6 @@ class Converter():
         if html is not None and len(html):
             html_text = etree.tostring(html)
             self.html_converter.handle(html_text)
-
-
-
-
 
 if __name__ == '__main__':
     unittest.main()

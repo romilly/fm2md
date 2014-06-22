@@ -1,7 +1,7 @@
 fm2md
 =====
 
-Freemind to Markdown Converter
+Freemind to Markdown Converter in Python.
 
 I'm going to use this as part of my LeanPub pipeline.
 

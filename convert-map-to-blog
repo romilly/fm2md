@@ -1,0 +1,5 @@
+#! /usr/bin/python
+from fm2md.convert import Converter, read_file
+
+converter = Converter(read_file('data/OpenTechnologyWorkshop-1.0.1.mm'))
+print converter.convert_map()

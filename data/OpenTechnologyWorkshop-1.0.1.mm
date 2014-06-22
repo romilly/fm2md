@@ -38,7 +38,8 @@
       I was joined by a friend who runs a lab at UCL;. I've been trying for a while to persuade him that his teams should build more of the
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node CREATED="1403327396798" ID="ID_1814263954" MODIFIED="1403327399747" TEXT="with friend"/>
 <node CREATED="1403327400238" ID="ID_1765392023" MODIFIED="1403327409522" TEXT="objection overcome"/>
 </node>
@@ -111,19 +112,7 @@
   </body>
 </html></richcontent>
 <node CREATED="1403327194862" ID="ID_1063496881" MODIFIED="1403327200667" TEXT="Dept of Genetics"/>
-<node CREATED="1403327203702" ID="ID_517226432" MODIFIED="1403432120953">
-<richcontent TYPE="NODE"><html>
-  <head>
-    
-  </head>
-  <body>
-    <p>
-      LT Monitoring and becoming an <i>accidental</i>&#160;entrepreneur
-    </p>
-  </body>
-</html>
-</richcontent>
-</node>
+<node CREATED="1403327203702" ID="ID_517226432" MODIFIED="1403327218627" TEXT="LT Monitoring and becoming an accidental entrepreneur"/>
 </node>
 <node CREATED="1403327113150" FOLDED="true" ID="ID_381567328" MODIFIED="1403327181163" TEXT="Courous Mohtadi">
 <richcontent TYPE="NOTE"><html>

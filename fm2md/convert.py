@@ -5,14 +5,10 @@ from hamcrest import assert_that, contains_string
 from html2text import HTML2Text
 from lxml import etree
 
-__author__ = 'romilly'
-
-
 def read_file(name):
     with open(name) as inp:
         result = inp.read()
     return result
-
 
 class ConverterTest(TestCase):
     def test_convert_creates_markdown_from_branch_titles(self):
@@ -25,8 +21,6 @@ class ConverterTest(TestCase):
 
 def remove_redundant_newlines(text):
     return text.replace("\n\n[\n]*","\n\n")
-
-
 
 class Converter():
     def __init__(self, text):

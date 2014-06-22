@@ -20,20 +20,28 @@ class ConverterTest(TestCase):
 </map>
 """
         fm_map = BytesIO(fm_map_text)
-        md = convert(fm_map)
+        converter = Converter(fm_map)
+        md = converter.convert()
         assert_that(md, contains_string('#with friend'))
         assert_that(md, contains_string('#objection overcome'))
 
 # TODO: add support for html links
 
-def convert(map_file):
-    result = StringIO()
-    fm = etree.parse(map_file)
-    root = fm.find('node')
-    for branch in root.iter():
+class Converter():
+    def __init__(self, map_file):
+        self._map_file = map_file
+
+    def convert_this(self, branch):
         if branch.get('TEXT'):
-            result.write('#%s\n' % branch.get('TEXT'))
-    return result.getvalue()
+            self.result.write('#%s\n' % branch.get('TEXT'))
+
+    def convert(self):
+        self.result = StringIO()
+        fm = etree.parse(self._map_file)
+        root = fm.find('node')
+        for branch in root.iter():
+            self.convert_this(branch)
+        return self.result.getvalue()
 
 
 if __name__ == '__main__':

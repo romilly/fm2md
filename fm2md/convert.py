@@ -1,7 +1,4 @@
 from StringIO import StringIO
-from unittest import TestCase
-import unittest
-from hamcrest import assert_that, contains_string
 from html2text import HTML2Text
 from lxml import etree
 
@@ -14,12 +11,6 @@ def read_file(name):
 # TODO: set sub-head level based on map level
 # TODO: Handle hyperlinks
 # TODO: Handle images
-
-class ConverterTest(TestCase):
-    def test_convert_creates_markdown_from_branch_titles(self):
-        converter = Converter(read_file('data/OpenTechnologyWorkshop-1.0.1.mm'))
-        md = converter.convert_map()
-        assert_that(md, contains_string('\n\n#Cambridge Engineering Labs\n\n'))
 
 def remove_redundant_newlines(text):
     return text.replace("\n\n[\n]*","\n\n")
@@ -54,6 +45,3 @@ class Converter():
         if html is not None and len(html):
             html_text = etree.tostring(html)
             self.html_converter.handle(html_text)
-
-if __name__ == '__main__':
-    unittest.main()

@@ -124,7 +124,7 @@
   </body>
 </html></richcontent>
 </node>
-<node CREATED="1403327185342" ID="ID_193445872" MODIFIED="1403451150883" TEXT="Boris Adryan">
+<node CREATED="1403327185342" ID="ID_193445872" LINK="http://3.bp.blogspot.com/-X28uH90VYiA/U6b6Z775UwI/AAAAAAAABPY/zUFMorM9xTw/s1600/boris.jpg" MODIFIED="1403541768155" TEXT="Boris Adryan">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -152,7 +152,8 @@
       Boris now runs an IoT consultancy at thingslearn.com
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 </node>
 <node CREATED="1403327113150" ID="ID_381567328" MODIFIED="1403447407152" TEXT="Courous Mohtadi">
 <richcontent TYPE="NOTE"><html>

@@ -16,8 +16,8 @@ def remove_redundant_newlines(text):
     return text.replace("\n\n[\n]*","\n\n")
 
 class Converter():
-    def __init__(self, text):
-        self.map_text = text
+    def __init__(self, xml):
+        self.map_xml = xml
         self.result = StringIO()
         self.html_converter = HTML2Text(out=self.append)
 
@@ -33,7 +33,7 @@ class Converter():
                 self.convert_node(child, depth + 1)
 
     def convert_map(self):
-        fm = etree.XML(self.map_text)
+        fm = etree.XML(self.map_xml)
         root = fm.find('node')
         for node in root:
             self.convert_node(node)

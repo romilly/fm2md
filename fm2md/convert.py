@@ -15,18 +15,40 @@ def read_file(name):
 def remove_redundant_newlines(text):
     return text.replace("\n\n[\n]*","\n\n")
 
-class Converter():
-    def __init__(self, xml):
-        self.map_xml = xml
-        self.result = StringIO()
-        self.html_converter = HTML2Text(out=self.append)
+class AbstractWriter():
+    def append_text(self, text):
+        raise Exception('My subclass should implement this')
 
-    def append(self, text):
+    def add_image(self, image_url):
+        raise Exception('My subclass should implement this')
+
+    def get_value(self):
+        raise Exception('My subclass should implement this')
+
+
+class LeanpubWriter(AbstractWriter):
+    def __init__(self):
+        self.result = StringIO()
+
+    def append_text(self, text):
         self.result.write(text)
+
+    def add_image(self, image_url):
+        pass
+
+    def get_value(self):
+        return self.result.getvalue()
+
+
+class Converter():
+    def __init__(self, xml, writer):
+        self.map_xml = xml
+        self.writer = writer
+        self.html_converter = HTML2Text(out=writer.append_text)
 
     def convert_node(self, node, depth=1):
         if node.get('TEXT'):
-            self.result.write('\n\n%s%s\n\n' % (depth*'#', node.get('TEXT')))
+            self.writer.append_text('\n\n%s%s\n\n' % (depth*'#', node.get('TEXT')))
         self.convert_html_in(node)
         if len(node):
             for child in node:
@@ -37,7 +59,7 @@ class Converter():
         root = fm.find('node')
         for node in root:
             self.convert_node(node)
-        return remove_redundant_newlines(self.result.getvalue())
+        return remove_redundant_newlines(self.writer.get_value())
 
     def convert_html_in(self, node):
         html = node.find('richcontent')

@@ -12,6 +12,7 @@ class ConverterTest(TestCase):
         assert_that(md, contains_string('I spent a delightful and stimulating day'))
         assert_that(md, contains_string('##Morning talks'))
         assert_that(md, contains_string('###Alex Bradbury'))
+        assert_that(md, contains_string('series of 15-minute presentations'))
 
 if __name__ == '__main__':
     unittest.main()

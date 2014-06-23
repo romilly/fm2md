@@ -17,14 +17,14 @@
     </p>
   </body>
 </html></richcontent>
-<node CREATED="1403325133222" ID="ID_1764049163" MODIFIED="1403444949729" POSITION="right" TEXT="Cambridge Engineering Labs">
+<node CREATED="1403325133222" ID="ID_1764049163" MODIFIED="1403541094386" POSITION="right" TEXT="Cambridge Engineering Labs">
 <richcontent TYPE="NOTE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      I spend a delightful and stimulating day last Friday at the Cambridge Open Technology Workshop.
+      I spent a delightful and stimulating day last Friday at the Cambridge Open Technology Workshop.
     </p>
     <p>
       
@@ -45,8 +45,7 @@
       In the morning we listened and learned from a series of 15-minute presentations. At the end of the morning sessions we heard lightning introductions to the afternoon's demonstrations.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1403325650086" ID="ID_1689683861" MODIFIED="1403445256992" TEXT="Alex Bradbury">
 <richcontent TYPE="NOTE"><html>
   <head>
@@ -57,8 +56,7 @@
       The first morning talk, <i>The Raspberry Pi as a building block for Creative Engineering</i>, was delivered by Alex Bradbury. This was a great introduction to the talks that followed, as many of the projects used the Pi. Some also used Arduinos - more and more people have decided that the two complement each other very effectively.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1403326804326" ID="ID_1938563774" MODIFIED="1403445468681" TEXT="James Scott">
 <richcontent TYPE="NOTE"><html>
@@ -70,8 +68,7 @@
       Next came James Scott who works at the Microsoft Research Labs. He introduced the Microsoft Gadgeteer ecosystem. It's a collection of hardware implementations of the Open Gadgeteer specifications, supported by Open Source software implemented within the .Net framework. MS use Gadgeteer boards to prototype new devices.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1403326855222" ID="ID_853152537" MODIFIED="1403450765375" TEXT="Damien George">
 <richcontent TYPE="NOTE"><html>
@@ -89,8 +86,7 @@
       Damien is a post-doc at DAMPT; Micro Python is a personal project. All the more impressive that he has managed to create a very useful, compact, quick implementation of Python that runs on a small and inexpensive microcontroller board. I'll say more about Micro Python in a separate blog post.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1403326944726" ID="ID_1688597568" MODIFIED="1403450790844" TEXT="Laura James">
 <richcontent TYPE="NOTE"><html>
@@ -114,8 +110,7 @@
       Laura delivered one bombshell: it seems that works licensed under the Creative Commons non-commercial license cannot safely be used by Educators. I've had to rethink the licensing on an e-book I'm writing, as I wand it to be freely used in Primary, Secondary and Tertiary Education.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1403327285726" ID="ID_1518572765" MODIFIED="1403450449235" TEXT="Andrew Moore">
 <richcontent TYPE="NOTE"><html>
@@ -127,8 +122,7 @@
       Andrew Moore told us about an Open Source initiative that has had profound consequences - the netFPGA project. One spin-off, the OSNT tester, does much of what commercial network testers costing L500,000 do, but at a fraction of the cost.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1403327185342" ID="ID_193445872" MODIFIED="1403451150883" TEXT="Boris Adryan">
 <richcontent TYPE="NOTE"><html>
@@ -158,8 +152,7 @@
       Boris now runs an IoT consultancy at thingslearn.com
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1403327113150" ID="ID_381567328" MODIFIED="1403447407152" TEXT="Courous Mohtadi">
 <richcontent TYPE="NOTE"><html>
@@ -171,8 +164,7 @@
       Courous Mohtadi of Mathworks told us about MatLab and Simulink support for the Raspberry Pi and Arduino. I waited eagerly for an announcement of a free Pi version of Matlab&#160;- in vain.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1403327489134" ID="ID_1829589637" MODIFIED="1403450752382" TEXT="Jim Haseloff">
 <richcontent TYPE="NOTE"><html>
@@ -184,8 +176,7 @@
       Jim Hasselhof talked about Open Biology, including OpenPlant, and invited people to join the Cambridge Synthetic Biology Meetup. &#160;They meet each week at the Cafe Synthetique.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1403327527710" ID="ID_1392378946" MODIFIED="1403451175985" TEXT="Rachel Rayns">
 <richcontent TYPE="NOTE"><html>
@@ -203,8 +194,7 @@
       Zoe sounds like a lot of fun; I'm sure we will see more of her.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1403327568910" ID="ID_1710959652" MODIFIED="1403448712831" TEXT="Garth Wells">
 <richcontent TYPE="NOTE"><html>
@@ -216,8 +206,7 @@
       Garth Wells told us about the lessons he had learned through his involvement with FEniCS, a community based around Open Source Software for Finite Element Analysis. The talk was excellent, and deserves a wider audience. I hope he publishes it.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1403327606926" ID="ID_559932550" LINK="OTW-Afternoondemos.mm" MODIFIED="1403449294255" TEXT="And next, an excellent afternoon">
 <richcontent TYPE="NOTE"><html>
@@ -235,8 +224,7 @@
       Everyone I spoke to shared my enthusiasm for this event. Thanks to Alexandre Kabla for organising it so well, and to everyone who contributed. It was fun, fascinating and informative. I hope that http://openlabtools.eng.cam.ac.uk/ runs another event soon.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 </node>

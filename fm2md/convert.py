@@ -24,13 +24,13 @@ class Converter():
     def append(self, text):
         self.result.write(text)
 
-    def convert_node(self, node):
+    def convert_node(self, node, depth=1):
         if node.get('TEXT'):
-            self.result.write('\n\n#%s\n\n' % node.get('TEXT'))
+            self.result.write('\n\n%s%s\n\n' % (depth*'#', node.get('TEXT')))
         self.convert_html_in(node)
         if len(node):
             for child in node:
-                self.convert_node(child)
+                self.convert_node(child, depth + 1)
 
     def convert_map(self):
         fm = etree.XML(self.map_text)

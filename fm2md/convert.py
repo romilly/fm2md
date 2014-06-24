@@ -41,7 +41,7 @@ class LeanpubWriter(AbstractWriter):
 
 
 class Converter():
-    def __init__(self, xml, writer):
+    def __init__(self, xml, writer=LeanpubWriter()):
         self.map_xml = xml
         self.writer = writer
         self.html_converter = HTML2Text(out=writer.append_text)

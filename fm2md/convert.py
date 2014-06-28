@@ -15,7 +15,7 @@ def read_file(name):
 def remove_redundant_newlines(text):
     return text.replace("\n\n[\n]*","\n\n")
 
-class AbstractWriter():
+class AbstractReformatter():
     def append_text(self, text):
         raise Exception('My subclass should implement this')
 
@@ -29,7 +29,7 @@ class AbstractWriter():
         raise Exception('My subclass should implement this')
 
 
-class LeanpubWriter(AbstractWriter):
+class LeanpubReformatter(AbstractReformatter):
     def __init__(self):
         self.result = StringIO()
         self.script = StringIO()
@@ -50,7 +50,7 @@ class LeanpubWriter(AbstractWriter):
 
 
 class Converter():
-    def __init__(self, xml, writer=LeanpubWriter()):
+    def __init__(self, xml, writer=LeanpubReformatter()):
         self.map_xml = xml
         self.writer = writer
         self.html_converter = HTML2Text(out=writer.append_text)

@@ -22,22 +22,31 @@ class AbstractWriter():
     def add_image(self, image_url):
         raise Exception('My subclass should implement this')
 
-    def get_value(self):
+    def get_md(self):
+        raise Exception('My subclass should implement this')
+
+    def get_script(self):
         raise Exception('My subclass should implement this')
 
 
 class LeanpubWriter(AbstractWriter):
     def __init__(self):
         self.result = StringIO()
+        self.script = StringIO()
 
     def append_text(self, text):
         self.result.write(text)
 
-    def add_image(self, image_url):
-        pass
+    def add_image(self, image_location):
+        if image_location.startswith('http:'):
+            raise Exception('nonce error')
+        self.script.write('cp %s ./manuscript/images/\n' % image_location)
 
-    def get_value(self):
+    def get_md(self):
         return self.result.getvalue()
+
+    def get_script(self):
+        return self.script.getvalue()
 
 
 class Converter():
@@ -50,16 +59,21 @@ class Converter():
         if node.get('TEXT'):
             self.writer.append_text('\n\n%s%s\n\n' % (depth*'#', node.get('TEXT')))
         self.convert_html_in(node)
+        if node.get('LINK'):
+            self.writer.add_image(node.get('LINK'))
         if len(node):
             for child in node:
                 self.convert_node(child, depth + 1)
+
+    def get_trimmed_markdown(self):
+        return remove_redundant_newlines(self.writer.get_md())
 
     def convert_map(self):
         fm = etree.XML(self.map_xml)
         root = fm.find('node')
         for node in root:
             self.convert_node(node)
-        return remove_redundant_newlines(self.writer.get_value())
+        return (self.get_trimmed_markdown(), self.writer.get_script())
 
     def convert_html_in(self, node):
         html = node.find('richcontent')

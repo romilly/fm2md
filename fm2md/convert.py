@@ -15,21 +15,8 @@ def read_file(name):
 def remove_redundant_newlines(text):
     return text.replace("\n\n[\n]*","\n\n")
 
-class AbstractReformatter():
-    def append_text(self, text):
-        raise Exception('My subclass should implement this')
 
-    def add_image(self, image_url):
-        raise Exception('My subclass should implement this')
-
-    def get_md(self):
-        raise Exception('My subclass should implement this')
-
-    def get_script(self):
-        raise Exception('My subclass should implement this')
-
-
-class LeanpubReformatter(AbstractReformatter):
+class LeanpubReformatter():
     def __init__(self):
         self.result = StringIO()
         self.script = StringIO()

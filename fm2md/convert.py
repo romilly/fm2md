@@ -73,7 +73,6 @@ class Converter():
         root = fm.find('node')
         for node in root:
             self.convert_node(node)
-        return (self.get_trimmed_markdown(), self.writer.get_script())
 
     def convert_html_in(self, node):
         html = node.find('richcontent')

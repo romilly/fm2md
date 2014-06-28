@@ -1,4 +1,5 @@
 from StringIO import StringIO
+import os
 from html2text import HTML2Text
 from lxml import etree
 
@@ -17,7 +18,8 @@ def remove_redundant_newlines(text):
 
 
 class LeanpubReformatter():
-    def __init__(self):
+    def __init__(self, target_dir):
+        self.target_dir = target_dir
         self.result = StringIO()
         self.script = StringIO()
 
@@ -27,7 +29,7 @@ class LeanpubReformatter():
     def add_image(self, image_location):
         if image_location.startswith('http:'):
             raise Exception('nonce error')
-        self.script.write('cp %s ./manuscript/images/\n' % image_location)
+        self.script.write('cp %s %s\n' % (image_location, os.path.join(self.target_dir, 'manuscript', 'images/')))
 
     def get_md(self):
         return self.result.getvalue()
@@ -37,7 +39,7 @@ class LeanpubReformatter():
 
 
 class Converter():
-    def __init__(self, xml, writer=LeanpubReformatter()):
+    def __init__(self, xml, writer=LeanpubReformatter('.')):
         self.map_xml = xml
         self.writer = writer
         self.html_converter = HTML2Text(out=writer.append_text)

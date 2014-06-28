@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1403325634326" ID="ID_225780265" LINK="OpenTechnologyWorkshop-1.0.1.mm" MODIFIED="1403449247014" TEXT="Afternoon demos">
+<node CREATED="1403325634326" ID="ID_225780265" LINK="OpenTechnologyWorkshop-1.0.1.mm" MODIFIED="1403931975836" TEXT="Afternoon demos">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -22,23 +22,36 @@
 </node>
 <node CREATED="1403420205218" MODIFIED="1403420532456" POSITION="right" TEXT="Josie Hughes and James Ritchie">
 <icon BUILTIN="calendar"/>
-<node CREATED="1403420223858" MODIFIED="1403420238384" TEXT="Automated microscopy and mechanical testing"/>
-</node>
-<node CREATED="1403420245882" MODIFIED="1403420255232" POSITION="right" TEXT="Jakub Nedbal">
-<node CREATED="1403420257194" MODIFIED="1403420260400" TEXT="KCL"/>
-<node CREATED="1403420262858" MODIFIED="1403420281632" TEXT="Open Source 3D printed flow cytometer"/>
-</node>
-<node CREATED="1403420294530" MODIFIED="1403420408130" POSITION="right" TEXT="Pratap Singh">
+<node CREATED="1403420223858" ID="ID_244779457" LINK="../../../Dropbox/rareblog/images/opentechworkshop/josie.jpg" MODIFIED="1403931975856" TEXT="Automated microscopy and mechanical testing">
 <richcontent TYPE="NOTE"><html>
   <head>
     
   </head>
   <body>
     <p>
-      Pratap is a year 10 student at the Persr School, Cambridge.
+      Josie and James had two projects to display: an automated microscopy stage and a tensile strength tester.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
+</node>
+</node>
+<node CREATED="1403420245882" MODIFIED="1403420255232" POSITION="right" TEXT="Jakub Nedbal">
+<node CREATED="1403420257194" MODIFIED="1403420260400" TEXT="KCL"/>
+<node CREATED="1403420262858" MODIFIED="1403420281632" TEXT="Open Source 3D printed flow cytometer"/>
+</node>
+<node CREATED="1403420294530" ID="ID_481121420" MODIFIED="1403932043686" POSITION="right" TEXT="Pratap Singh">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      Pratap is a year 10 student at the Perse School, Cambridge.
+    </p>
+  </body>
+</html>
+</richcontent>
 <node CREATED="1403420322058" MODIFIED="1403420363471" TEXT="Cosmic-ray muon detection: can we verify a prediction of Special Relativity in the school laborarory?"/>
 </node>
 <node CREATED="1403420413914" MODIFIED="1403420420447" POSITION="right" TEXT="Jonathan Waite">

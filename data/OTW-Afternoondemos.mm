@@ -10,8 +10,7 @@
       The afternoon session took place in an upstairs laboratory. It was, in effect, a MiniMaker Faire with concurrent demos spread around the Lab. I really enjoyed the chance to meet the makers and view their projects. I came away with a PyBoard which I am now exploring. More details soon!
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1403419938515" MODIFIED="1403420484640" POSITION="right" TEXT="Richard Bowman">
 <icon BUILTIN="calendar"/>
 <node CREATED="1403419960738" MODIFIED="1403419973472" TEXT="3d Printed Platform for Microscopy"/>
@@ -32,15 +31,14 @@
       Josie and James had two projects to display: an automated microscopy stage and a tensile strength tester.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 </node>
 <node CREATED="1403420245882" MODIFIED="1403420255232" POSITION="right" TEXT="Jakub Nedbal">
 <node CREATED="1403420257194" MODIFIED="1403420260400" TEXT="KCL"/>
 <node CREATED="1403420262858" MODIFIED="1403420281632" TEXT="Open Source 3D printed flow cytometer"/>
 </node>
-<node CREATED="1403420294530" ID="ID_481121420" MODIFIED="1403932043686" POSITION="right" TEXT="Pratap Singh">
+<node CREATED="1403420294530" ID="ID_481121420" MODIFIED="1404021241671" POSITION="right" TEXT="Pratap Singh">
 <richcontent TYPE="NOTE"><html>
   <head>
     

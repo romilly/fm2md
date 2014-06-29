@@ -12,6 +12,12 @@ def prepare_test_directory(test_dir):
     os.makedirs(os.path.join(test_dir, 'manuscript','images'))
 
 
+def contents_of(*elements):
+    path = os.path.join(*elements)
+    with open(path) as file_to_read:
+        return file_to_read.read()
+
+
 class ConverterTest(TestCase):
     def test_convert_creates_markdown_from_branch_titles(self):
         test_dir = './data/test/'
@@ -19,11 +25,11 @@ class ConverterTest(TestCase):
         formatter = LeanpubReformatter(test_dir)
         converter = Converter(read_file('data/OTW-Afternoondemos.mm'), formatter)
         converter.convert_map()
-        md = formatter.get_md()
+        md = contents_of(test_dir, 'manuscript','Chapter1.txt')
         assert_that(md, contains_string('\n\n#Richard Bowman\n\n'))
         assert_that(md, contains_string('\n\n##3d Printed Platform for Microscopy\n\n'))
         assert_that(md, contains_string('\n\nPratap is a year 10 student at the Perse School, Cambridge. \n\n')) ## space!
-        script = formatter.get_script()
+        script = contents_of(test_dir, 'copy-images.sh')
         assert_that(script, contains_string('cp ../../../Dropbox/rareblog/images/opentechworkshop/josie.jpg ./data/test/manuscript/images/\n'))
 
 if __name__ == '__main__':

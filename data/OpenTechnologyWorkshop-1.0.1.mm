@@ -33,9 +33,8 @@
       I was joined by a friend who runs a lab at UCL. I've been trying for a while to persuade him that his teams should build more of their lab equipment. He's always resisted this; the powers that be tell him that researchers should do research, rather than build equipment. Alexandre Kabla's introduction gave a possible solution; why not get undergraduates to work on equipment as part of their project work. There was a splendid example of this on display in the afternoon.
     </p>
   </body>
-</html>
-</richcontent>
-<node CREATED="1403325628894" ID="ID_720582646" MODIFIED="1403445006828" TEXT="Morning talks">
+</html></richcontent>
+<node CREATED="1403325628894" ID="ID_720582646" MODIFIED="1404021241275" TEXT="Morning talks">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -45,7 +44,8 @@
       In the morning we listened and learned from a series of 15-minute presentations. At the end of the morning sessions we heard lightning introductions to the afternoon's demonstrations.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node CREATED="1403325650086" ID="ID_1689683861" MODIFIED="1403445256992" TEXT="Alex Bradbury">
 <richcontent TYPE="NOTE"><html>
   <head>
@@ -152,8 +152,7 @@
       Boris now runs an IoT consultancy at thingslearn.com
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 </node>
 <node CREATED="1403327113150" ID="ID_381567328" MODIFIED="1403447407152" TEXT="Courous Mohtadi">
 <richcontent TYPE="NOTE"><html>

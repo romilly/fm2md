@@ -43,7 +43,6 @@ class LeanpubReformatter():
         else:
             self.writer = writer
 
-
     def append_text(self, text):
         self.writer.write(text)
 
@@ -58,10 +57,14 @@ class LeanpubReformatter():
 
 
 class Converter():
-    def __init__(self, xml, formatter=LeanpubReformatter('.')):
-        self.map_xml = xml
-        self.formatter = formatter
-        self.html_converter = HTML2Text(out=formatter.append_text)
+    def __init__(self, path_to_map, formatter=None):
+        self.map_xml = read_file(path_to_map)
+        directory = os.path.split(path_to_map)[0]
+        if formatter is None:
+            self.formatter = LeanpubReformatter(directory)
+        else:
+            self.formatter = formatter
+        self.html_converter = HTML2Text(out=self.formatter.append_text)
 
     def convert_node(self, node, depth=1):
         if node.get('TEXT'):

@@ -13,7 +13,9 @@ It's possible, but tedious, to take a Freemind mind map and manually create the 
 
 fm2leanpub is not finished, but it has enough features to be usable.
 
-You can see an example of its use in the convert-map-to-blog script. It currently writes to the filesystem,
-in the directories expected by Leanpub.
+You can see an example of its use in the convert-map-to-blog script.
 
-
+The script expects to be called with the path to the mind map as its first argument.
+It will create manuscript and image directories in the same directory as the mind map, will create text in a file called
+Chapter1.txt in the manuscript directory, and will chreate a script called copy-images.sh in the same directory
+as the mind map. Run that script to copy all required images into the images directory.

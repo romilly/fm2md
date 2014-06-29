@@ -9,7 +9,7 @@ from fm2md.convert import Converter
 def prepare_test_directory(test_dir):
     if os.path.exists(test_dir):
         shutil.rmtree(test_dir)
-    os.makedirs(os.path.join(test_dir, 'manuscript','images'))
+    os.makedirs(test_dir)
 
 
 def contents_of(*elements):

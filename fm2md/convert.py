@@ -31,6 +31,7 @@ class FileWriter():
         self.script.write(text)
 
     def close(self):
+        os.makedirs(os.path.join(self.target_dir, 'manuscript', 'images'))
         with open(os.path.join(self.target_dir, 'manuscript','Chapter1.txt'),'w') as ofile:
             ofile.write(self.result.getvalue())
         with open(os.path.join(self.target_dir, 'copy-images.sh'),'w') as ofile:

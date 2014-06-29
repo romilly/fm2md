@@ -13,6 +13,7 @@ It's possible, but tedious, to take a Freemind mind map and manually create the 
 
 fm2leanpub is not finished, but it has enough features to be usable.
 
-You can see an example of its use in the convert-map-to-blog script. It currently writes to standard output, so you will need to pipe the result to a file.
+You can see an example of its use in the convert-map-to-blog script. It currently writes to the filesystem,
+in the directories expected by Leanpub.
 
 

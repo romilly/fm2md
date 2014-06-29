@@ -22,6 +22,7 @@ class FileWriter():
         self.target_dir = target_dir
         self.result = StringIO()
         self.script = StringIO()
+        self.script.write('#! /usr/bin/bash\n')
 
     def write(self, text):
         self.result.write(text)

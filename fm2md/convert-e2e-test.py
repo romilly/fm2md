@@ -17,6 +17,7 @@ def contents_of(*elements):
     with open(path) as file_to_read:
         return file_to_read.read()
 
+# TODO: Add tests for image in right place, image title
 
 class ConverterTest(TestCase):
     def test_convert_creates_markdown_from_branch_titles(self):
@@ -26,7 +27,8 @@ class ConverterTest(TestCase):
         converter = Converter('data/test/OTW-Afternoondemos.mm')
         converter.convert_map()
         md = contents_of(test_dir, 'manuscript','Chapter1.txt')
-        assert_that(md, contains_string('\n\n#Richard Bowman\n\n'))
+        assert_that(md, contains_string('{frontmatter}\n\n#Introduction\n\n'))
+        assert_that(md, contains_string('{mainmatter}\n\n#Richard Bowman\n\n'))
         assert_that(md, contains_string('\n\n##3d Printed Platform for Microscopy\n\n'))
         assert_that(md, contains_string('\n\nPratap is a year 10 student at the Perse School, Cambridge. \n\n')) ## space!
         script = contents_of(test_dir, 'copy-images.sh')

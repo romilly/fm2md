@@ -1,9 +1,7 @@
 #! /usr/bin/python
-from fm2md.convert import Converter, read_file
+from fm2md.convert import Converter
 from sys import argv
-import os
 
 path = argv[1]
-directory = os.path.split(path)
-converter = Converter(read_file(path), directory)
+converter = Converter(path)
 print converter.convert_map()

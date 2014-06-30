@@ -1,4 +1,5 @@
 from StringIO import StringIO
+import codecs
 import os
 from html2text import HTML2Text
 from lxml import etree
@@ -31,8 +32,10 @@ class FileWriter():
         self.script.write(text)
 
     def close(self):
-        os.makedirs(os.path.join(self.target_dir, 'manuscript', 'images'))
-        with open(os.path.join(self.target_dir, 'manuscript','Chapter1.txt'),'w') as ofile:
+        image_dir = os.path.join(self.target_dir, 'manuscript', 'images')
+        if not os.path.exists(image_dir):
+            os.makedirs(image_dir)
+        with codecs.open(os.path.join(self.target_dir, 'manuscript','Chapter1.txt'),'w', encoding='utf8') as ofile:
             ofile.write(self.result.getvalue())
         with open(os.path.join(self.target_dir, 'copy-images.sh'),'w') as ofile:
             ofile.write(self.script.getvalue())
@@ -44,15 +47,21 @@ class LeanpubReformatter():
             self.writer = FileWriter(target_dir)
         else:
             self.writer = writer
+        self.image_dir =  'images/'
+        self.relative_dir = os.path.join(target_dir, 'manuscript','images/')
 
     def append_text(self, text):
         self.writer.write(text)
 
-    def add_image(self, image_location):
+    def add_image(self, image_title, image_location):
         if image_location.startswith('http:'):
             raise Exception('nonce error')
-        self.writer.append_to_script('cp %s %s\n' % (
-            image_location, os.path.join(self.target_dir, 'manuscript', 'images/')))
+        image_file_name = os.path.join('images',os.path.split(image_location)[1])
+        self.writer.write('\n![%s](%s)' % (image_title, image_file_name))
+        # no need to copy images that are already in the right place!
+        if image_location.startswith(self.relative_dir):
+            return
+        self.writer.append_to_script('cp %s %s\n' % (image_location, self.relative_dir))
 
     def close(self):
         self.writer.close()
@@ -68,12 +77,22 @@ class Converter():
             self.formatter = formatter
         self.html_converter = HTML2Text(out=self.formatter.append_text)
 
-    def convert_node(self, node, depth=1):
-        if node.get('TEXT'):
-            self.formatter.append_text('\n\n%s%s\n\n' % (depth*'#', node.get('TEXT')))
-        self.convert_html_in(node)
+    def convert_node_contents(self, depth, node):
         if node.get('LINK'):
-            self.formatter.add_image(node.get('LINK'))
+            self.formatter.add_image(node.get('TEXT'), node.get('LINK'))
+        elif node.get('TEXT'):
+            self.formatter.append_text('\n\n%s%s\n\n' % (depth * '#', node.get('TEXT')))
+        self.convert_html_in(node)
+
+    def convert_node(self, node, depth=1):
+        icons = node.findall('icon')
+        if len(icons):
+            for icon in icons:
+                if icon.get('BUILTIN') == 'gohome':
+                    self.formatter.append_text('\n\n{frontmatter}')
+                if icon.get('BUILTIN') == 'pencil':
+                    self.formatter.append_text('\n\n{mainmatter}')
+        self.convert_node_contents(depth, node)
         if len(node):
             for child in node:
                 self.convert_node(child, depth + 1)

@@ -11,8 +11,22 @@
     </p>
   </body>
 </html></richcontent>
-<node CREATED="1403419938515" MODIFIED="1403420484640" POSITION="right" TEXT="Richard Bowman">
+<node CREATED="1404045750293" ID="ID_459101811" MODIFIED="1404045810098" POSITION="right" TEXT="Introduction">
+<richcontent TYPE="NOTE"><html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      The afternoon sessions were great.
+    </p>
+  </body>
+</html></richcontent>
+<icon BUILTIN="gohome"/>
+</node>
+<node CREATED="1403419938515" ID="ID_427160657" MODIFIED="1404045817594" POSITION="right" TEXT="Richard Bowman">
 <icon BUILTIN="calendar"/>
+<icon BUILTIN="pencil"/>
 <node CREATED="1403419960738" MODIFIED="1403419973472" TEXT="3d Printed Platform for Microscopy"/>
 </node>
 <node CREATED="1403420159730" MODIFIED="1403420522000" POSITION="right" TEXT="Damien George">
@@ -55,7 +69,7 @@
 <node CREATED="1403420413914" MODIFIED="1403420420447" POSITION="right" TEXT="Jonathan Waite">
 <node CREATED="1403420421538" MODIFIED="1403420427599" TEXT="Open Source 3D printing"/>
 </node>
-<node CREATED="1403420431970" MODIFIED="1403420435295" POSITION="right" TEXT="Di Wu">
+<node CREATED="1403420431970" ID="ID_1338990517" MODIFIED="1403420435295" POSITION="right" TEXT="Di Wu">
 <node CREATED="1403420436378" MODIFIED="1403420459216" TEXT="Home monitoring of Lung Function with Raspberry Pi"/>
 </node>
 </node>

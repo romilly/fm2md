@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1403325634326" ID="ID_225780265" LINK="OpenTechnologyWorkshop-1.0.1.mm" MODIFIED="1403931975836" TEXT="Afternoon demos">
+<node CREATED="1403325634326" ID="ID_225780265" LINK="OpenTechnologyWorkshop-1.0.1.mm" MODIFIED="1404574952714" TEXT="Afternoon demos">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -11,7 +11,7 @@
     </p>
   </body>
 </html></richcontent>
-<node CREATED="1404045750293" ID="ID_459101811" MODIFIED="1404045810098" POSITION="right" TEXT="Introduction">
+<node CREATED="1404045750293" ID="ID_459101811" MODIFIED="1405100144105" POSITION="right" TEXT="Introduction">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -21,7 +21,8 @@
       The afternoon sessions were great.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <icon BUILTIN="gohome"/>
 </node>
 <node CREATED="1403419938515" ID="ID_427160657" MODIFIED="1404045817594" POSITION="right" TEXT="Richard Bowman">
@@ -62,8 +63,7 @@
       Pratap is a year 10 student at the Perse School, Cambridge.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1403420322058" MODIFIED="1403420363471" TEXT="Cosmic-ray muon detection: can we verify a prediction of Special Relativity in the school laborarory?"/>
 </node>
 <node CREATED="1403420413914" MODIFIED="1403420420447" POSITION="right" TEXT="Jonathan Waite">

@@ -4,4 +4,4 @@ from sys import argv
 
 path = argv[1]
 converter = Converter(path)
-print converter.convert_map()
+converter.convert_map()

@@ -26,10 +26,12 @@ class ConverterTest(TestCase):
         shutil.copy('data/OTW-Afternoondemos.mm', 'data/test/OTW-Afternoondemos.mm')
         converter = Converter('data/test/OTW-Afternoondemos.mm')
         converter.convert_map()
-        md = contents_of(test_dir, 'manuscript','Chapter1.txt')
+        md = contents_of(test_dir, 'manuscript','Chapter0.txt')
         assert_that(md, contains_string('{frontmatter}\n\n#Introduction\n\n'))
+        md = contents_of(test_dir, 'manuscript','Chapter1.txt')
         assert_that(md, contains_string('{mainmatter}\n\n#Richard Bowman\n\n'))
         assert_that(md, contains_string('\n\n##3d Printed Platform for Microscopy\n\n'))
+        md = contents_of(test_dir, 'manuscript','Chapter5.txt')
         assert_that(md, contains_string('\n\nPratap is a year 10 student at the Perse School, Cambridge. \n\n')) ## space!
         script = contents_of(test_dir, 'copy-images.sh')
         assert_that(script, contains_string('#! /usr/bin/bash\n'))

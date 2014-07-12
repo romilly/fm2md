@@ -21,24 +21,42 @@ def remove_redundant_newlines(text):
 class FileWriter():
     def __init__(self, target_dir):
         self.target_dir = target_dir
-        self.result = StringIO()
+        self.current_chapter = StringIO()
+        self.chapters = []
         self.script = StringIO()
         self.script.write('#! /usr/bin/bash\n')
 
     def write(self, text):
-        self.result.write(text)
+        self.current_chapter.write(text)
+
+    def chapter(self):
+        chapter = self.current_chapter.getvalue()
+        self.current_chapter.close()
+        if len(chapter):
+            self.chapters.append(chapter)
+        self.current_chapter = StringIO()
 
     def append_to_script(self, text):
         self.script.write(text)
 
-    def close(self):
+    def process_images(self):
+        with open(os.path.join(self.target_dir, 'copy-images.sh'), 'w') as ofile:
+            ofile.write(self.script.getvalue())
         image_dir = os.path.join(self.target_dir, 'manuscript', 'images')
         if not os.path.exists(image_dir):
             os.makedirs(image_dir)
-        with codecs.open(os.path.join(self.target_dir, 'manuscript','Chapter1.txt'),'w', encoding='utf8') as ofile:
-            ofile.write(self.result.getvalue())
-        with open(os.path.join(self.target_dir, 'copy-images.sh'),'w') as ofile:
-            ofile.write(self.script.getvalue())
+
+    def write_chapters(self):
+        for number, chapter in enumerate(self.chapters):
+            with codecs.open(os.path.join(self.target_dir, 'manuscript', 'Chapter%d.txt' % number), 'w', encoding='utf8') as ofile:
+                ofile.write(chapter)
+        with open(os.path.join(self.target_dir, 'manuscript', 'Book.txt'),'w') as ofile:
+            for i in range(len(self.chapters)):
+                ofile.write('Chapter%d.txt\n' % i)
+
+    def close(self):
+        self.process_images()
+        self.write_chapters()
 
 class LeanpubReformatter():
     def __init__(self, target_dir, writer = None):
@@ -52,6 +70,9 @@ class LeanpubReformatter():
 
     def append_text(self, text):
         self.writer.write(text)
+
+    def chapter(self):
+        self.writer.chapter()
 
     def add_image(self, image_title, image_location):
         if image_location.startswith('http:'):
@@ -104,7 +125,9 @@ class Converter():
         fm = etree.XML(self.map_xml)
         root = fm.find('node')
         for node in root:
+            self.chapter()
             self.convert_node(node)
+        self.chapter()
         self.formatter.close()
 
     def convert_html_in(self, node):
@@ -113,3 +136,6 @@ class Converter():
         if html is not None and len(html):
             html_text = etree.tostring(html)
             self.html_converter.handle(html_text)
+
+    def chapter(self):
+        self.formatter.chapter()

@@ -1,6 +1,6 @@
 <map version="1.0.1">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1403325634326" ID="ID_225780265" LINK="OpenTechnologyWorkshop-1.0.1.mm" MODIFIED="1404574952714" TEXT="Afternoon demos">
+<node CREATED="1403325634326" ID="ID_225780265" LINK="OpenTechnologyWorkshop-1.0.1.mm" MODIFIED="1405958218963" TEXT="Afternoon demos">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -10,7 +10,8 @@
       The afternoon session took place in an upstairs laboratory. It was, in effect, a MiniMaker Faire with concurrent demos spread around the Lab. I really enjoyed the chance to meet the makers and view their projects. I came away with a PyBoard which I am now exploring. More details soon!
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <node CREATED="1404045750293" ID="ID_459101811" MODIFIED="1405100144105" POSITION="right" TEXT="Introduction">
 <richcontent TYPE="NOTE"><html>
   <head>
@@ -21,8 +22,7 @@
       The afternoon sessions were great.
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <icon BUILTIN="gohome"/>
 </node>
 <node CREATED="1403419938515" ID="ID_427160657" MODIFIED="1404045817594" POSITION="right" TEXT="Richard Bowman">
@@ -36,7 +36,7 @@
 </node>
 <node CREATED="1403420205218" MODIFIED="1403420532456" POSITION="right" TEXT="Josie Hughes and James Ritchie">
 <icon BUILTIN="calendar"/>
-<node CREATED="1403420223858" ID="ID_244779457" LINK="../../../Dropbox/rareblog/images/opentechworkshop/josie.jpg" MODIFIED="1403931975856" TEXT="Automated microscopy and mechanical testing">
+<node CREATED="1403420223858" ID="ID_244779457" LINK="../../../Dropbox/rareblog/images/opentechworkshop/josie.jpg" MODIFIED="1405958614288" TEXT="Automated microscopy and mechanical testing">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -47,6 +47,7 @@
     </p>
   </body>
 </html></richcontent>
+<attribute NAME="width" VALUE="30"/>
 </node>
 </node>
 <node CREATED="1403420245882" MODIFIED="1403420255232" POSITION="right" TEXT="Jakub Nedbal">

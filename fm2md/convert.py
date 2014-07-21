@@ -1,6 +1,7 @@
 from StringIO import StringIO
 import codecs
 import os
+from string import Template
 from html2text import HTML2Text
 from lxml import etree
 
@@ -74,9 +75,11 @@ class LeanpubReformatter():
     def chapter(self):
         self.writer.chapter()
 
-    def add_image(self, image_title, image_location):
+    def add_image(self, image_title, image_location, width):
         if image_location.startswith('http:'):
             raise Exception('nonce error')
+        if width:
+            self.writer.write(Template("{width=$width%, float=right}\n").substitute(dict(width=width)))
         image_file_name = os.path.join('images',os.path.split(image_location)[1])
         self.writer.write('\n![%s](%s)' % (image_title, image_file_name))
         # no need to copy images that are already in the right place!
@@ -100,7 +103,8 @@ class Converter():
 
     def convert_node_contents(self, depth, node):
         if node.get('LINK'):
-            self.formatter.add_image(node.get('TEXT'), node.get('LINK'))
+            width = self.get_attribute(node, 'width')
+            self.formatter.add_image(node.get('TEXT'), node.get('LINK'), width)
         elif node.get('TEXT'):
             self.formatter.append_text('\n\n%s%s\n\n' % (depth * '#', node.get('TEXT')))
         self.convert_html_in(node)
@@ -132,10 +136,15 @@ class Converter():
 
     def convert_html_in(self, node):
         html = node.find('richcontent')
-        # first deal with notes
         if html is not None and len(html):
             html_text = etree.tostring(html)
             self.html_converter.handle(html_text)
 
     def chapter(self):
         self.formatter.chapter()
+
+    def get_attribute(self, node, param):
+        attributes = node.xpath('attribute[@NAME="width"]')
+        if len(attributes) == 0:
+            return None
+        return attributes[0].get('VALUE')

@@ -31,6 +31,9 @@ class ConverterTest(TestCase):
         md = contents_of(test_dir, 'manuscript','Chapter1.txt')
         assert_that(md, contains_string('{mainmatter}\n\n#Richard Bowman\n\n'))
         assert_that(md, contains_string('\n\n##3d Printed Platform for Microscopy\n\n'))
+        md = contents_of(test_dir, 'manuscript','Chapter3.txt')
+        assert_that(md, contains_string('\n\n#Josie Hughes and James Ritchie'))
+        assert_that(md, contains_string('\n{width=30%, float=right}\n'))
         md = contents_of(test_dir, 'manuscript','Chapter5.txt')
         assert_that(md, contains_string('\n\nPratap is a year 10 student at the Perse School, Cambridge. \n\n')) ## space!
         script = contents_of(test_dir, 'copy-images.sh')

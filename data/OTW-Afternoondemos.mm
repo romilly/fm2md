@@ -10,8 +10,7 @@
       The afternoon session took place in an upstairs laboratory. It was, in effect, a MiniMaker Faire with concurrent demos spread around the Lab. I really enjoyed the chance to meet the makers and view their projects. I came away with a PyBoard which I am now exploring. More details soon!
     </p>
   </body>
-</html>
-</richcontent>
+</html></richcontent>
 <node CREATED="1404045750293" ID="ID_459101811" MODIFIED="1405100144105" POSITION="right" TEXT="Introduction">
 <richcontent TYPE="NOTE"><html>
   <head>
@@ -36,7 +35,7 @@
 </node>
 <node CREATED="1403420205218" MODIFIED="1403420532456" POSITION="right" TEXT="Josie Hughes and James Ritchie">
 <icon BUILTIN="calendar"/>
-<node CREATED="1403420223858" ID="ID_244779457" LINK="../../../Dropbox/rareblog/images/opentechworkshop/josie.jpg" MODIFIED="1405958614288" TEXT="Automated microscopy and mechanical testing">
+<node CREATED="1403420223858" ID="ID_244779457" LINK="../../../Dropbox/rareblog/images/opentechworkshop/josie.jpg" MODIFIED="1406231536717" TEXT="Automated microscopy and mechanical testing">
 <richcontent TYPE="NOTE"><html>
   <head>
     
@@ -46,7 +45,8 @@
       Josie and James had two projects to display: an automated microscopy stage and a tensile strength tester.
     </p>
   </body>
-</html></richcontent>
+</html>
+</richcontent>
 <attribute NAME="width" VALUE="30"/>
 </node>
 </node>

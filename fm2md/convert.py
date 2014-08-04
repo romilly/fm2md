@@ -15,10 +15,6 @@ def read_file(name):
 # TODO: Handle hyperlinks
 # TODO: Handle images
 
-def remove_redundant_newlines(text):
-    return text.replace("\n\n[\n]*","\n\n")
-
-
 class FileWriter():
     def __init__(self, target_dir):
         self.target_dir = target_dir

@@ -2,6 +2,7 @@
 import codecs
 import sys
 
+# Horrid fix because markdown2 does not respect formatting in code :(
 def tidy(text):
     return text.replace(u"\u00A0", " ").replace("$%", "<strong>").replace('%$','</strong>')
 

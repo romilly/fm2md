@@ -115,6 +115,12 @@
 </node>
 <node COLOR="#36d12a" CREATED="1266488273147" ID="Freemind_Link_1517433488" MODIFIED="1266488921179" TEXT="Ideas">
 <icon BUILTIN="idea"/>
+<node CREATED="1407404883130" ID="ID_805116054" MODIFIED="1407404944901" TEXT="do not include in sample or book">
+<icon BUILTIN="button_cancel"/>
+</node>
+<node CREATED="1407404907958" ID="ID_1835816873" MODIFIED="1407404923970" TEXT="include in sample">
+<icon BUILTIN="button_ok"/>
+</node>
 </node>
 <node COLOR="#9679df" CREATED="1266488793745" ID="Freemind_Link_1954142386" MODIFIED="1266488959040" TEXT="Fridge">
 <icon BUILTIN="desktop_new"/>

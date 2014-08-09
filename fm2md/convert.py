@@ -118,9 +118,6 @@ class Converter():
             for child in node:
                 self.convert_node(child, depth + 1)
 
-    def get_trimmed_markdown(self):
-        return remove_redundant_newlines(self.formatter.get_md())
-
     def convert_map(self):
         fm = etree.XML(self.map_xml)
         root = fm.find('node')

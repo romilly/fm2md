@@ -71,7 +71,7 @@ class LeanpubReformatter():
     def chapter(self):
         self.writer.chapter()
 
-    def add_image(self, image_title, image_location, width):
+    def add_image(self, image_location, width, image_title=''):
         if image_location.startswith('http:'):
             raise Exception('nonce error')
         if width:
@@ -98,11 +98,11 @@ class Converter():
         self.html_converter = HTML2Text(out=self.formatter.append_text)
 
     def convert_node_contents(self, depth, node):
+        if node.get('TEXT'):
+            self.formatter.append_text('\n\n%s%s\n\n' % (depth * '#', node.get('TEXT')))
         if node.get('LINK'):
             width = self.get_attribute(node, 'width')
-            self.formatter.add_image(node.get('TEXT'), node.get('LINK'), width)
-        elif node.get('TEXT'):
-            self.formatter.append_text('\n\n%s%s\n\n' % (depth * '#', node.get('TEXT')))
+            self.formatter.add_image(node.get('LINK'), width) # TODO: add title (caption)
         self.convert_html_in(node)
 
     def convert_node(self, node, depth=1):

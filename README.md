@@ -26,3 +26,18 @@ It will create manuscript and image directories in the same directory as the min
 and will create Book.txt and a chapter for each top-level branch of the mind map.
 It also creates a script called copy-images.sh in the same directory
 as the mind map. Run that script to copy all required external images into the images directory.
+
+
+## How to build
+
+```
+chmod +x ./convert-map-to-blog.py
+sudo apt-get install python3-pip
+sudo apt-get install python-virtualenv
+virtualenv --python python2 ~/pyenv2
+#virtualenv --python python3 ~/pyenv3
+source ~/pyenv2/bin/activate
+pip install html2text
+pip install lxml
+./convert-map-to-blog.py <file.md>
+```
